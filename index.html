@@ -6,10 +6,11 @@
 
 <style>
  body {
- font-family: Arial, sans-serif;
+ font-family:negrito ,sans-serif ;
  text-align: center;
- margin-top: 50px;
- background-color: #f9f9f9;
+ margin-top: 40px;
+ background-color:#98f5ff;
+}
  }
  input {
  padding: 10px;
@@ -22,24 +23,24 @@
  cursor: pointer;
  }
  #resultado {
- margin-top: 20px;
+ margin-top: 40px;
  font-weight: bold;
- color: #2a2a2a;
+ color:#2a2a2a;
  }
 </style>
 
 </head>
 <body>
- <h1>Você pode votar?</h1>
- <p>Digite sua idade:</p>
- <input type="number" id="idade" placeholder="Ex: 25">
- <button onclick="verificar()">Verificar</button>
+ <h1>Numeros Positivo e Negativo </h1>
+ <p>Digite um numero :</p>
+ <input type="number" id="numero" placeholder="Ex: 25">
+ <button onclick="verificarnumero()">Verificar</button>
  <p id="resultado"></p>
- 
  <script>
- function verificar() {
- const valor = parseInt(document.getElementById("valor").value);
+ function verificarnumero() {
+ const valor=parseInt(document.getElementById("numero").value);
  let mensagem = "";
+ 
  if (isNaN(valor)) {
  mensagem = "Por favor, digite um numero  valida.";
  } else if (valor > 0) {
@@ -47,7 +48,7 @@
  } else if (valor < 0) {
  mensagem = " o numero e negativo .";
  } else {
- mensagem = "o numero e zero .";
+ mensagem = "o número e zéro .";
  }
  document.getElementById("resultado").innerText = mensagem;
  }
