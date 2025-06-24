@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ <meta charset="UTF-8">
+ <title>Verificador de Voto</title>
+
+<style>
+ body {
+ font-family: Arial, sans-serif;
+ text-align: center;
+ margin-top: 50px;
+ background-color: #f9f9f9;
+ }
+ input {
+ padding: 10px;
+ font-size: 16px;
+ }
+ button {
+ padding: 10px 15px;
+ font-size: 16px;
+ margin-left: 10px;
+ cursor: pointer;
+ }
+ #resultado {
+ margin-top: 20px;
+ font-weight: bold;
+ color: #2a2a2a;
+ }
+</style>
+
+</head>
+<body>
+ <h1>Você pode votar?</h1>
+ <p>Digite sua idade:</p>
+ <input type="number" id="idade" placeholder="Ex: 25">
+ <button onclick="verificar()">Verificar</button>
+ <p id="resultado"></p>
+ 
+ <script>
+ function verificar() {
+ const valor = parseInt(document.getElementById("valor").value);
+ let mensagem = "";
+ if (isNaN(valor)) {
+ mensagem = "Por favor, digite um numero  valida.";
+ } else if (valor > 0) {
+ mensagem = "o numero e positivo .";
+ } else if (valor < 0) {
+ mensagem = " o numero e negativo .";
+ } else {
+ mensagem = "o numero e zero .";
+ }
+ document.getElementById("resultado").innerText = mensagem;
+ }
+</script>
+</body>
+</html>
